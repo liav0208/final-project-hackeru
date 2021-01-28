@@ -1,0 +1,302 @@
+/* HOME */
+.home__container {
+    position: relative;
+    .video-container {
+        position: relative;
+        .home__video {
+            width: 100%;
+            object-fit: fill;
+            height: 80rem;
+            filter: brightness(0.4);
+
+            @include respond(leptop) {
+                height: 55rem;
+            }
+
+            @include respond(tab-land) {
+                height: 50rem;
+            }
+
+            @include respond(tab-port) {
+                height: 40rem;
+            }
+        }
+
+        .header-container {
+            position: absolute;
+            padding: 4rem 5rem;
+            border-radius: 0.7rem;
+            top: 30%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.6);
+
+            @include respond(tab-land) {
+                padding: 3rem 4rem;
+            }
+
+            @include respond(tab-port) {
+                padding: 2rem;
+                display: block;
+                left: 50%;
+                top: 50%;
+            }
+
+            @include respond(phone) {
+                width: 90%;
+            }
+            .header {
+                font-size: 5rem;
+                margin-bottom: 1rem;
+                @include respond(leptop) {
+                    font-size: 3rem;
+                }
+
+                @include respond(tab-land) {
+                    font-size: 2.6rem;
+                    margin-bottom: 0.6rem;
+                }
+
+                &-sub {
+                    font-size: 3rem;
+                    @include respond(leptop) {
+                        font-size: 2rem;
+                    }
+
+                    @include respond(tab-land) {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .home__goals {
+        .goals-header {
+            display: block;
+            margin: 0 auto;
+            width: 74rem;
+            padding-bottom: 1rem;
+            font-size: 5rem;
+            border-image-source: linear-gradient(45deg, #e3fdfd, #a6e3e9, #e3fdfd);
+            border-image-slice: 1;
+            border-bottom: 4px solid;
+
+            @include respond(leptop) {
+                width: 70rem;
+                font-size: 4rem;
+            }
+
+            @include respond(tab-land) {
+                font-size: 3.4rem;
+                width: 65rem;
+            }
+
+            @include respond(tab-port) {
+                font-size: 2.8rem;
+                width: 50rem;
+            }
+
+            @include respond(phone) {
+                font-size: 2rem;
+                width: 30rem;
+            }
+        }
+        margin-bottom: 17rem;
+
+        @include respond(phone) {
+            margin-bottom: 5rem;
+        }
+    }
+
+    .home__become-student {
+        background-image: url("http://localhost:8181/images/home-student.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0 10%;
+        min-height: 60rem;
+        padding: 20rem 4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: #a6e3e9;
+        clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+
+        @include respond(tab-port) {
+            display: flex;
+            justify-self: center;
+            align-items: center;
+        }
+        @include respond(phone) {
+            clip-path: none;
+            background-position: right;
+            height: 30rem;
+        }
+
+        .grid-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 60%;
+            margin: 0 auto;
+
+            @include respond(leptop) {
+                width: 80%;
+            }
+            @include respond(tab-land) {
+                width: 100%;
+            }
+
+            .hhl-title {
+                font-size: 3rem;
+
+                @include respond(leptop) {
+                    font-size: 2.4rem;
+                }
+                @include respond(tab-land) {
+                    font-size: 2.2rem;
+                }
+
+                @include respond(phone) {
+                    font-size: 1.85rem;
+                    margin-bottom: 0.4rem;
+                }
+            }
+            .hhl-para {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                @include respond(tab-land) {
+                    font-size: 1.8rem;
+                }
+                @include respond(phone) {
+                    font-size: 1.6rem;
+                }
+            }
+            .btn {
+                @include respond(phone) {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+
+    /* HOME BECOME TEACHER */
+
+    .home__become-teacher {
+        background-image: url("http://localhost:8181/images/home-teacher.jpeg");
+        background-size: cover;
+        background-position: center;
+        min-height: 60rem;
+        clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 5rem;
+        align-items: center;
+        margin: -10rem 0 4rem;
+
+        @include respond(tab-port) {
+            padding: 0;
+            padding: 0 2rem;
+        }
+
+        @include respond(phone) {
+            clip-path: none;
+            margin: 2rem 0;
+            background-position: left;
+        }
+
+        .bt__header-main {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+
+            @include respond(leptop) {
+                font-size: 2.4rem;
+            }
+
+            @include respond(tab-land) {
+                font-size: 2.2rem;
+            }
+
+            @include respond(tab-port) {
+                font-size: 2rem;
+            }
+
+            @include respond(phone) {
+                text-align: justify;
+                font-size: 1.85rem;
+            }
+        }
+        .bt__header-sub {
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+            @include respond(leptop) {
+                font-size: 2.2rem;
+            }
+
+            @include respond(tab-land) {
+                font-size: 2rem;
+            }
+            @include respond(phone) {
+                text-align: justify;
+                font-size: 1.85rem;
+            }
+        }
+
+        .bt__para {
+            font-size: 2rem;
+            @include respond(tab-land) {
+                font-size: 1.8rem;
+            }
+
+            @include respond(phone) {
+                font-size: 1.6rem;
+            }
+        }
+
+        .btn {
+            display: block;
+            width: 20rem;
+            margin: 2rem auto 0;
+
+            @include respond(phone) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .reviews__container {
+        text-align: center;
+        margin: 20rem auto 20rem;
+        width: 80%;
+        .review-title {
+            font-size: 4rem;
+            margin: 10rem auto;
+            width: 90rem;
+            border-image-source: linear-gradient(45deg, #e3fdfd, #a6e3e9, #e3fdfd);
+            border-image-slice: 1;
+            border-bottom: 4px solid;
+            @include respond(leptop) {
+                font-size: 3.7rem;
+            }
+
+            @include respond(tab-land) {
+                font-size: 2.7rem;
+                width: 80%;
+            }
+
+            @include respond(phone) {
+                font-size: 2rem;
+            }
+        }
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            @include respond(tab-land) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

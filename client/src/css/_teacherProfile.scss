@@ -1,0 +1,161 @@
+.teacher-profile__container {
+    .header {
+        display: grid;
+        width: 80%;
+        margin: 0 auto;
+        grid-template-columns: 40rem auto 50rem;
+        padding: 5rem;
+        background-color: #e3fdfd;
+        border-bottom-left-radius: 3rem;
+        border-bottom-right-radius: 3rem;
+
+        @include respond(leptop) {
+            width: 90%;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include respond(tab-land) {
+            width: 100%;
+            border-radius: 0;
+        }
+
+        @include respond(tab-port) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .teacher-img {
+            width: 30rem;
+            height: 30rem;
+
+            @include respond(leptop) {
+                width: 25rem;
+                height: 25rem;
+            }
+
+            @include respond(tab-land) {
+                width: 20rem;
+                height: 20rem;
+            }
+
+            @include respond(tab-port) {
+                width: 17rem;
+                height: 17rem;
+            }
+        }
+
+        .teacher-details {
+            h1 {
+                font-size: 3rem;
+                margin-bottom: 2rem;
+
+                @include respond(leptop) {
+                    font-size: 2.4rem;
+                }
+
+                @include respond(tab-land) {
+                    font-size: 2rem;
+                }
+
+                @include respond(tab-port) {
+                    font-size: 1.8rem;
+                }
+            }
+
+            .teacher-span {
+                font-size: 2rem;
+                display: block;
+                margin-bottom: 1rem;
+
+                @include respond(leptop) {
+                    font-size: 1.7rem;
+                }
+
+                @include respond(tab-port) {
+                    font-size: 1.5rem;
+                }
+
+                i {
+                    margin-right: 0.6rem;
+                }
+            }
+        }
+
+        .teacher-details {
+            text-align: left;
+        }
+
+        .send-message {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2rem;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            width: 40rem;
+            height: 20rem;
+            margin: 0 auto;
+            background-color: #a6e3e9;
+
+            @include respond(leptop) {
+                width: 33rem;
+            }
+
+            @include respond(tab-land) {
+                width: 28rem;
+            }
+
+            @include respond(tab-port) {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                width: 80%;
+                margin-top: 2rem;
+            }
+
+            h1 {
+                font-size: 3rem;
+                margin-bottom: 2rem;
+
+                @include respond(leptop) {
+                    font-size: 2.4rem;
+                }
+
+                @include respond(tab-land) {
+                    font-size: 2.2rem;
+                }
+            }
+
+            &__link {
+                display: block;
+                background-color: #30e3ca;
+                font-size: 2rem;
+                padding: 1rem 1.7rem;
+                text-decoration: none;
+                color: #fff;
+                transition: all 0.7s;
+                border-radius: 0.4rem;
+
+                @include respond(leptop) {
+                    font-size: 1.7 rem;
+                }
+                @include respond(tab-land) {
+                    font-size: 1.6rem;
+                }
+
+                i {
+                    border-right: 1px solid #fff;
+                    padding-right: 1rem;
+                    margin-right: 1rem;
+                    color: #fff;
+                }
+
+                &:hover {
+                    background-color: #25b6a3;
+                }
+
+                &:last-child {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}

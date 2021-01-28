@@ -1,0 +1,155 @@
+.uh__container {
+    width: 80%;
+    margin: 0 auto;
+    @include respond(leptop) {
+        width: 90%;
+    }
+
+    @include respond(tab-land) {
+        width: 100%;
+    }
+
+    .uh__header {
+        margin: 0 auto 10rem;
+        padding: 4rem 6rem;
+        background: linear-gradient(to right bottom, #e3fdfd, #a6e3e9);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include respond(leptop) {
+            padding: 3rem;
+        }
+
+        @include respond(tab-land) {
+            padding: 1rem;
+        }
+
+        .uh__header-text {
+            background-color: rgba(250, 250, 250, 0.7);
+            padding: 4rem 3rem;
+            border-radius: 0.2rem;
+            border: none;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+            @include respond(leptop) {
+                padding: 2.5rem;
+            }
+
+            @include respond(tab-port) {
+                padding: 1rem;
+            }
+
+            .uh__title {
+                font-size: 4rem;
+                @include respond(leptop) {
+                    font-size: 3rem;
+                }
+
+                @include respond(tab-port) {
+                    font-size: 2rem;
+                }
+            }
+
+            .uh__main-para {
+                font-size: 2.4rem;
+                @include respond(leptop) {
+                    font-size: 2rem;
+                }
+                @include respond(tab-port) {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+
+        .uh__header-img {
+            width: 50rem;
+            border-radius: 1rem;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+            @include respond(leptop) {
+                width: 40rem;
+            }
+
+            @include respond(tab-port) {
+                width: 25rem;
+            }
+        }
+    }
+
+    .home__section {
+        .section-header {
+            display: inline-block;
+            margin: 0 10rem;
+            font-size: 3rem;
+            border-image-source: linear-gradient(45deg, #e3fdfd, #a6e3e9, #e3fdfd);
+            border-image-slice: 1;
+            border-bottom: 4px solid;
+
+            @include respond(tab-port) {
+                display: block;
+                margin: 0 auto;
+                width: 40%;
+                text-align: center;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .new-teachers {
+        display: flex;
+        margin: 3rem auto 15rem;
+        width: 90%;
+
+        @include respond(leptop) {
+            width: 100%;
+        }
+
+        @include respond(tab-land) {
+            margin-bottom: 7rem;
+        }
+
+        @include respond(tab-port) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .home__blog {
+        margin: 20rem auto;
+        height: 40rem;
+        background-image: linear-gradient(to right bottom, rgba(228, 249, 245, 0.3), rgba(48, 227, 202, 0.3)),
+            url("http://localhost:8181/images/raise-hand.jpg");
+        background-position: left;
+        background-size: cover;
+        width: 65rem;
+        border-radius: 1rem;
+        padding: 3rem;
+        padding-top: 8rem;
+        position: relative;
+
+        @include respond(leptop) {
+            height: 35rem;
+        }
+
+        @include respond(tab-port) {
+            width: 80%;
+        }
+
+        &-title {
+            font-size: 2.2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        &-para {
+            font-size: 1.8rem;
+            color: #fff;
+        }
+
+        &-link {
+            position: absolute;
+
+            bottom: 2rem;
+        }
+    }
+}

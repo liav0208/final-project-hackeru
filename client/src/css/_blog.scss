@@ -1,0 +1,183 @@
+.blog__container {
+    width: 80%;
+    margin: 0 auto;
+
+    @include respond(tab-land) {
+        width: 100%;
+        margin: 0;
+    }
+
+    .blog__header-container {
+        background: linear-gradient(to right bottom, #e3fdfd, #a6e3e9);
+        padding: 4rem;
+        min-height: 40rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .blog__title {
+            width: 45%;
+            text-align: center;
+            display: block;
+            background-color: #fafafa;
+            padding: 2rem;
+            font-size: 3rem;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+            @include respond(tab-land) {
+                width: 70%;
+            }
+
+            @include respond(tab-port) {
+                font-size: 2.4rem;
+            }
+            @include respond(phone) {
+                font-size: 1.9rem;
+                width: 90%;
+            }
+        }
+    }
+
+    /* Posts */
+
+    .messages__container {
+        width: 90%;
+        margin: 5rem auto;
+        background-color: #fafafa;
+        padding: 5rem;
+        position: relative;
+
+        @include respond(tab-land) {
+            width: 100%;
+            margin: 0;
+        }
+
+        .btn {
+            @include respond(tab-port) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .btn-create {
+            position: absolute;
+            top: 1rem;
+            left: 2rem;
+        }
+
+        .message__header {
+            font-size: 4rem;
+            margin-bottom: 4rem;
+            display: block;
+            text-align: center;
+
+            @include respond(tab-port) {
+                font-size: 2.5rem;
+            }
+        }
+
+        .post {
+            width: 70%;
+            margin: 3rem auto;
+            border: 1px solid #cbf1f5;
+            border-radius: 0.7rem;
+            padding: 2rem;
+            border-radius: 0.4rem;
+            background-color: #e3fdfd;
+            &:not(:last-child) {
+                margin-bottom: 7rem;
+            }
+
+            @include respond(tab-port) {
+                width: 90%;
+            }
+
+            @include respond(phone) {
+                width: 95%;
+            }
+
+            span {
+                @include respond(tab-port) {
+                    display: block;
+                }
+            }
+
+            &__title {
+                font-size: 3rem;
+
+                @include respond(tab-land) {
+                    font-size: 2.3rem;
+                }
+            }
+
+            &__date {
+                font-size: 1.5rem;
+            }
+            &__author {
+                margin-left: 2rem;
+                font-size: 1.5rem;
+            }
+
+            &__hr {
+                margin: 0.7rem 0 0;
+                border: none;
+                border-bottom: 2px solid #cbf1f5;
+            }
+
+            &__body {
+                font-size: 1.6rem;
+                background-color: #fff;
+                padding: 1rem 2rem;
+                height: 10rem;
+                overflow: scroll;
+                overflow-x: hidden;
+                width: 100%;
+
+                &::-webkit-scrollbar-track {
+                    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+                    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+                    background-color: #40514e;
+                    border-radius: 10px;
+                }
+
+                &::-webkit-scrollbar {
+                    width: 10px;
+                    background-color: #f5f5f5;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    background-color: #fff;
+                    background-image: -webkit-linear-gradient(top, #e2fdfd 0%, #a7e4ea 50%, #a7e4ea 51%, #e2fdfd 100%);
+                }
+            }
+
+            &__respond {
+                border-top: 1px solid #a6e3e9;
+                padding-top: 1rem;
+                display: flex;
+                align-items: center;
+
+                .btn {
+                    background-color: #fff;
+
+                    @include respond(tab-land) {
+                        font-size: 1.8rem;
+                    }
+                    @include respond(tab-port) {
+                        font-size: 1.6rem;
+                    }
+
+                    &:hover {
+                        background-color: #00e0ff;
+                    }
+                }
+            }
+        }
+        .blog__btn-container {
+            margin: 0 auto;
+            width: 20rem;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

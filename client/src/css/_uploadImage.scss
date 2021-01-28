@@ -1,0 +1,84 @@
+.upload {
+    padding-top: 10rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: radial-gradient(
+        circle 993px at 0.5% 50.5%,
+        rgba(137, 171, 245, 0.37) 0%,
+        rgba(245, 247, 252, 1) 100.2%
+    );
+    height: 100%;
+
+    .upload__image {
+        width: 40rem;
+        height: 40rem;
+        border-radius: 50%;
+        border: 0.5rem solid #000;
+        margin-bottom: 5rem;
+
+        @include respond(leptop) {
+            width: 35rem;
+            height: 35rem;
+        }
+
+        @include respond(tab-port) {
+            width: 27rem;
+            height: 27rem;
+        }
+        @include respond(phone) {
+            width: 20rem;
+            height: 20rem;
+        }
+    }
+
+    form {
+        width: 40rem;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5rem;
+
+        @include respond(tab-port) {
+            width: 30rem;
+        }
+
+        @include respond(phone) {
+            width: 23rem;
+        }
+
+        input {
+            opacity: 0;
+            display: none;
+        }
+
+        label,
+        .send-btn {
+            font-size: 2rem;
+            padding: 0.8rem 1.2rem;
+            background-color: #0099cc;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.4s;
+
+            @include respond(tab-land) {
+                font-size: 1.7rem;
+            }
+
+            &:hover {
+                transform: translateY(-3px);
+                background-color: lighten($color: #0099cc, $amount: 4);
+            }
+
+            &:active,
+            &:focus {
+                transform: translateY(-1px);
+                border: none;
+            }
+
+            i {
+                margin-right: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.signin__container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right bottom, #e3fdfd, #a6e3e9);
+
+    .singin__card {
+        background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+        border-radius: 1rem;
+
+        .signin__title {
+            width: 90%;
+            margin: 0 auto;
+            font-size: 3rem;
+            text-align: center;
+            padding: 2rem;
+            color: #fff;
+            display: block;
+            border-bottom: 2px solid #fff;
+        }
+
+        .signin__form {
+            margin: 0 auto;
+            padding: 4rem;
+            position: relative;
+            text-align: center;
+
+            .input__group {
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+                &-input {
+                    border: none;
+                    font-size: 2rem;
+                    padding: 0.6rem 1rem;
+                    display: block;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                &-error {
+                    font-size: 1.2rem;
+                    color: red;
+                }
+            }
+        }
+    }
+}

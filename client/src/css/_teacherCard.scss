@@ -1,0 +1,101 @@
+.teacher-card {
+    width: 40rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(to right bottom, #e3fdfd, #a6e3e9);
+    margin: 2rem;
+    border-radius: 1rem;
+    height: 30rem;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    @include respond(leptop) {
+        height: 35rem;
+        padding: 1rem;
+    }
+
+    @include respond(tab-port) {
+        width: 60%;
+        justify-self: center;
+    }
+
+    @include respond(phone) {
+        width: 90%;
+    }
+    hr {
+        margin: 1rem 0;
+        border: none;
+        border-bottom: 4px dotted #fff;
+    }
+
+    .top-card {
+        height: 12rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__text {
+            .teacher-name {
+                font-size: 2.3rem;
+                margin-bottom: 0.5rem;
+
+                @include respond(leptop) {
+                    font-size: 1.8rem;
+                }
+            }
+            .teacher-span {
+                display: block;
+                font-size: 1.5rem;
+
+                &:not(:last-child) {
+                    margin-bottom: 0.4rem;
+                }
+
+                i {
+                    margin-right: 0.7rem;
+                }
+            }
+        }
+        .teacher-photo {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+            border: 1px solid gold;
+            -webkit-box-shadow: 0px 10px 18px 0px rgba(50, 50, 50, 0.52);
+            -moz-box-shadow: 0px 10px 18px 0px rgba(50, 50, 50, 0.52);
+            box-shadow: 0px 10px 18px 0px rgba(50, 50, 50, 0.52);
+
+            @include respond(tab-land) {
+                width: 8rem;
+                height: 8rem;
+            }
+        }
+    }
+
+    .bottom-card {
+        .teacher-about {
+            font-size: 1.6rem;
+            margin-bottom: 0.4rem;
+
+            @include respond(leptop) {
+                font-size: 1.4rem;
+            }
+        }
+        .teacher-link {
+            font-size: 2rem;
+            display: inline-block;
+            text-decoration: none;
+            color: goldenrod;
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            @include respond(leptop) {
+                font-size: 1.8rem;
+            }
+
+            &:hover {
+                color: rgb(206, 158, 38);
+            }
+        }
+    }
+}

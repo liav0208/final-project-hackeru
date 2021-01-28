@@ -1,0 +1,23 @@
+.results {
+    width: 80%;
+    margin: 0 auto;
+    &__header {
+        padding: 3rem 10rem;
+        height: 20rem;
+        background: linear-gradient(to right, #e3fdfd, #cbf1f5);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        border-bottom-left-radius: 0.7rem;
+        border-bottom-right-radius: 0.7rem;
+
+        &-title {
+            font-size: 4rem;
+        }
+    }
+
+    &__lessons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

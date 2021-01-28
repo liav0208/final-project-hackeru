@@ -1,0 +1,74 @@
+.review {
+    width: 40rem;
+    height: 50rem;
+    border: 1px solid #f2f2f2;
+    border-radius: 0.8rem;
+    padding: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    justify-self: center;
+
+    @include respond(leptop) {
+        width: 30rem;
+    }
+
+    @include respond(tab-land) {
+        width: 90%;
+        height: auto;
+        margin-bottom: 4rem;
+        padding-top: 3rem;
+    }
+
+    &:hover .review__img {
+        box-shadow: rgba(17, 12, 46, 0.45) 0px -5px 80px 0px;
+        @include respond(leptop) {
+            box-shadow: rgba(17, 12, 46, 0.45) 0px 0px 40px 0px;
+        }
+    }
+    &__img {
+        transition: all 0.6s ease-in-out;
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 20px 100px 0px;
+
+        @include respond(tab-land) {
+            width: 12rem;
+            height: 12rem;
+            float: left;
+        }
+
+        @include respond(phone) {
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+    &__span {
+        text-align: center;
+        display: block;
+        font-size: 1.6rem;
+        margin-bottom: 0.4rem;
+    }
+
+    hr {
+        border: none;
+        border-bottom: 3px solid #00e0ff;
+        width: 30%;
+        margin: 0 auto;
+    }
+
+    &__comment {
+        padding: 1rem;
+        font-size: 1.8rem;
+        @include respond(leptop) {
+            text-align: left;
+        }
+
+        @include respond(tab-land) {
+            clear: both;
+            font-size: 1.6rem;
+        }
+    }
+}

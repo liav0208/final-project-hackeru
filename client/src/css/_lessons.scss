@@ -1,0 +1,233 @@
+.myLessons__container,
+.myCard__container,
+.home__lessons,
+.results__lessons {
+    width: 90%;
+    margin: 2rem auto 10rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .no-lessons {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .lesson {
+        perspective: 150rem;
+        -webkit-perspective: 150rem;
+        -moz-perspective: 150rem;
+        position: relative;
+        height: 40rem;
+        margin: 3rem;
+
+        &__side {
+            overflow: hidden;
+            border-radius: 0.4rem;
+            transition: all 0.8s ease;
+            margin: 2rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: inherit;
+            backface-visibility: hidden;
+            box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+
+            &-front {
+                background-size: cover;
+            }
+
+            &-back {
+                padding: 3rem;
+                background: linear-gradient(to right bottom, #e3fdfd, #a6e3e9);
+                transform: rotateY(180deg);
+
+                .description {
+                    font-size: 2rem;
+
+                    @include respond(leptop) {
+                        font-size: 1.8rem;
+                    }
+                }
+
+                .bottom-link {
+                    position: fixed;
+                    bottom: 2rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+
+        &:hover .lesson__side-front {
+            transform: rotateY(-180deg);
+        }
+
+        &:hover .lesson__side-back {
+            transform: rotateY(0deg);
+        }
+
+        .front {
+            background-color: rgba(255, 255, 255, 0.432);
+            border-radius: 0.4rem;
+            padding: 3rem;
+            margin: 0 auto;
+            text-align: center;
+            height: inherit;
+
+            &__header {
+                font-size: 2.7rem;
+                padding-bottom: 1rem;
+                display: block;
+                margin: 0 auto;
+                color: #000;
+                width: 80%;
+                border-bottom: 2px solid #000;
+
+                @include respond(leptop) {
+                    font-size: 2.2rem;
+                }
+
+                @include respond(tab-port) {
+                    font-size: 1.8rem;
+                }
+            }
+
+            &__list {
+                list-style-type: none;
+                padding: 2rem;
+
+                @include respond(leptop) {
+                    padding: 0.6rem;
+                }
+
+                &-item {
+                    font-size: 2rem;
+                    color: #000;
+                    margin: 0.7rem 0;
+
+                    @include respond(leptop) {
+                        font-size: 1.7rem;
+                    }
+
+                    @include respond(tab-port) {
+                        font-size: 1.5rem;
+                    }
+
+                    &:last-child {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                hr {
+                    width: 80%;
+                    margin: 0 auto;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .lc__edit,
+    .lc__btn {
+        color: #000;
+        text-decoration: none;
+        font-size: 1.7rem;
+        display: inline;
+        margin: 0 1rem;
+    }
+
+    .lc__btn {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .lc__btn:active,
+    .lc__btn:focus {
+        outline: none;
+    }
+
+    .bottom-link {
+        width: 100%;
+        text-align: center;
+        margin: 4rem 0 0;
+        color: #000;
+        font-size: 2rem;
+    }
+
+    .bottom-link i {
+        margin-right: 0.3rem;
+    }
+}
+
+.home__lessons {
+    @include respond(tab-land) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(phone) {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson {
+        &__side {
+            @include respond(tab-land) {
+                width: 85%;
+            }
+
+            @include respond(tab-port) {
+                width: 100%;
+            }
+
+            @include respond(phone) {
+                width: 90%;
+            }
+        }
+    }
+}
+
+.myLessons__container {
+    width: 100%;
+    height: 92vh;
+    margin: 0;
+    background-image: radial-gradient(
+        circle 993px at 0.5% 50.5%,
+        rgba(137, 171, 245, 0.37) 0%,
+        rgba(245, 247, 252, 1) 100.2%
+    );
+    padding: 2rem;
+    overflow: scroll;
+    overflow-x: hidden;
+
+    @include respond(leptop) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include respond(tab-land) {
+        padding: 0.6rem;
+
+        .lesson {
+            margin: 1rem;
+        }
+    }
+
+    @include respond(tab-port) {
+        grid-template-columns: repeat(2, 1fr);
+
+        .lesson {
+            width: 80%;
+        }
+    }
+
+    @include respond(phone) {
+        grid-template-columns: 1fr;
+
+        .lesson {
+            height: 40rem;
+        }
+    }
+}
+
+.home__lessons {
+    width: 100%;
+}

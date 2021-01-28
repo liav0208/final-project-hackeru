@@ -1,0 +1,224 @@
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    background-color: #00303f;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1.8rem;
+
+    @include respond(tab-port) {
+        display: none;
+    }
+
+    &__list-left,
+    &__list-right {
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+
+        .navbar__link.logo {
+            font-size: 3rem;
+            color: #71c9ce;
+
+            @include respond(tab-land) {
+                font-size: 2.5rem;
+                margin-right: 0.2rem;
+            }
+        }
+
+        .navbar__item {
+            font-size: 2rem;
+            margin: 0 1rem;
+
+            @include respond(leptop) {
+                font-size: 1.7rem;
+            }
+
+            @include respond(tab-land) {
+                margin: 0 0.7rem;
+            }
+        }
+
+        .navbar__link {
+            color: #fff;
+            text-decoration: none;
+
+            i {
+                margin-right: 0.5rem;
+            }
+        }
+
+        .navbar__username {
+            cursor: pointer;
+            text-align: center;
+            min-width: 10rem;
+        }
+    }
+}
+
+.mobile-navbar {
+    width: 100%;
+    background-color: #00303f;
+    display: none;
+    justify-content: space-between;
+    padding: 1.5rem 1.8rem;
+
+    @include respond(tab-port) {
+        display: flex;
+    }
+
+    .navbar__list {
+        z-index: 60;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0.5rem 1rem;
+
+        .navbar__item {
+            .navbar__link.logo {
+                font-size: 2.6rem;
+                color: #71c9ce;
+                text-decoration: none;
+
+                @include respond(tab-port) {
+                    font-size: 2rem;
+                }
+            }
+
+            .navbar__search-btn {
+                background-color: transparent;
+                border: none;
+                align-self: center;
+
+                &:active,
+                &:focus {
+                    outline: none;
+                }
+                i {
+                    font-size: 2rem;
+                    color: #fff;
+                    padding: 1rem;
+
+                    @include respond(tab-port) {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+        .mobile-navbar__humburger {
+            position: relative;
+            display: flex;
+            height: 3rem;
+
+            .humburger {
+                transition: all 0.4s;
+                align-self: center;
+                height: 0.25rem;
+                width: 4rem;
+                background-color: #fff;
+
+                @include respond(tab-port) {
+                    height: 0.2rem;
+                    width: 3rem;
+                }
+
+                &::before {
+                    transition: all 0.4s;
+                    content: "";
+                    display: block;
+                    height: 0.25rem;
+                    width: 4rem;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 0;
+                    transform-origin: top left;
+                    @include respond(tab-port) {
+                        width: 3rem;
+                    }
+                }
+                &::after {
+                    transition: all 0.4s;
+                    content: "";
+                    display: block;
+                    height: 0.25rem;
+                    width: 4rem;
+                    background-color: #fff;
+                    position: absolute;
+                    bottom: 0;
+                    transform-origin: bottom left;
+                    @include respond(tab-port) {
+                        width: 3rem;
+                    }
+                }
+            }
+
+            .humburger.active {
+                align-self: center;
+                height: 0.25rem;
+                width: 4rem;
+                background-color: #00303f;
+                color: transparent;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    height: 0.25rem;
+                    width: 4rem;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 0;
+                    transform: rotate(45deg);
+                }
+                &::after {
+                    content: "";
+                    display: block;
+                    height: 0.25rem;
+                    width: 4rem;
+                    background-color: #fff;
+                    position: absolute;
+                    bottom: 0;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+    .links__list {
+        position: absolute;
+        top: 6.9rem;
+        left: 0;
+        background-color: #00303f;
+        list-style-type: none;
+        width: 100%;
+        z-index: 50;
+        text-align: center;
+        animation: moveDownList 0.6s;
+
+        .navbar__item {
+            padding: 1.5rem 0;
+            border-top: 1px solid #fff;
+
+            .navbar__link {
+                font-size: 2rem;
+                text-decoration: none;
+                color: #fff;
+
+                @include respond(tab-port) {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+@keyframes moveDownList {
+    0% {
+        transform: translateY(-15rem);
+        z-index: 0;
+    }
+    100% {
+        transform: translateY(0);
+        z-index: 50;
+    }
+}

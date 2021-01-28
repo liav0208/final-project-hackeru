@@ -1,0 +1,100 @@
+.search__container {
+    position: relative;
+
+    @include respond(tab-port) {
+        background-color: #00303f;
+        padding: 2rem 1rem;
+        width: 100%;
+        display: flex;
+    }
+    .searchBar {
+        position: relative;
+        width: 40rem;
+
+        @include respond(leptop) {
+            width: 33rem;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
+        &-input {
+            width: 100%;
+            font-size: 2rem;
+            padding: 1rem 1.4rem;
+            border-radius: 3rem;
+            border: none;
+
+            @include respond(leptop) {
+                font-size: 1.8rem;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &-btn {
+            background-color: #fff;
+            color: #000;
+            font-size: 1.6rem;
+            padding: 1rem;
+            border-radius: 50%;
+            border: none;
+            position: absolute;
+            right: 0.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+
+            &:focus,
+            &:active {
+                outline: none;
+            }
+        }
+    }
+
+    .result__list {
+        position: absolute;
+        top: 6rem;
+        list-style-type: none;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        width: 100%;
+        padding: 2rem;
+        border-radius: 0.7rem;
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+
+        @include respond(tab-port) {
+            width: 60%;
+            justify-self: center;
+            align-self: center;
+            top: 7rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &-item {
+            text-decoration: none;
+            color: #000;
+            font-size: 2rem;
+            padding: 0.4rem;
+            display: block;
+            i {
+                margin-right: 1rem;
+                font-size: 2rem;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #aaa;
+            }
+
+            &:hover {
+                background-color: #e2e2e2;
+            }
+        }
+    }
+}

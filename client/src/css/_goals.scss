@@ -1,0 +1,101 @@
+/* goals */
+
+.home__goals {
+    padding: 4rem;
+    margin: 8rem 0;
+
+    @include respond(phone) {
+        margin: 4rem 0 0;
+    }
+}
+
+.goals-header {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.goals__container {
+    margin: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include respond(leptop) {
+        margin: 3rem 0;
+    }
+
+    @include respond(tab-land) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(phone) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card__container {
+        padding: 4rem 6rem;
+        margin: 2rem;
+        width: 40rem;
+        text-align: center;
+        border: 2px solid #eee;
+        border-radius: 1rem;
+        background-image: radial-gradient(
+            circle 592px at 48.2% 50%,
+            rgba(255, 255, 249, 0.6) 0%,
+            rgba(160, 199, 254, 1) 74.6%
+        );
+
+        @include respond(leptop) {
+            padding: 3rem 2rem;
+            width: 25rem;
+            justify-self: center;
+        }
+
+        @include respond(tab-land) {
+            justify-self: center;
+            width: 27rem;
+            padding: 2rem 4rem;
+        }
+
+        @include respond(tab-port) {
+            width: 23rem;
+        }
+
+        i {
+            transition: all 0.8s;
+            font-size: 7rem;
+            margin-bottom: 5rem;
+
+            @include respond(leptop) {
+                font-size: 6rem;
+                margin-bottom: 3rem;
+            }
+        }
+
+        &:hover {
+            background-image: radial-gradient(
+                circle 592px at 48.2% 50%,
+                rgba(255, 255, 249, 0.6) 0%,
+                rgba(160, 199, 254, 1) 67.6%
+            );
+            i {
+                transform: scale(1.2);
+            }
+        }
+
+        &-title {
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+            @include respond(leptop) {
+                font-size: 2rem;
+            }
+        }
+        &-goal {
+            font-size: 1.8rem;
+            @include respond(leptop) {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
